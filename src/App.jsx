@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './App.css';
 
-function App() {
+const App = () => {
+  useEffect(() => {
+      navigator.geolocation.getCurrentPosition((pos) => {
+      const { latitude, longitude } = pos.coords;
+      console.log(latitude, longitude)
+    });
+  }, []);
+  
   return (
-    <div className="App">
+    <div>
+      App
     </div>
-  );
+  )
 }
 
 export default App;
