@@ -8,11 +8,17 @@ const App = () => {
       navigator.geolocation.getCurrentPosition((pos) => {
       const { latitude, longitude } = pos.coords;
       console.log(latitude, longitude)
-      axios.get(generateOpenWeatherLink(latitude, longitude)).then(res => console.log(res.data))
-      const { link, headers } = generateStormObject(latitude, longitude);
-      axios.get(link, {
-        headers
-      }).then(res => console.log(res.data))
+      const openWeatherCache = localStorage.getItem('open');
+      const stormWeatherCache = localStorage.getItem('storm');
+ 
+      if (openWeatherCache === null || stormWeatherCache === null) {
+        
+      }
+      else {
+        console.log('cached')
+        console.log(JSON.parse(openWeatherCache));
+        console.log(JSON.parse(stormWeatherCache));
+      }
     });
   }, []);
   
