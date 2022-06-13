@@ -1,0 +1,23 @@
+.weatherItemFirst {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-right: 3rem;
+}
+
+.tempFirst {
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.iconWeatherFirst {
+    height: 150px;
+}
+
+.weatherInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

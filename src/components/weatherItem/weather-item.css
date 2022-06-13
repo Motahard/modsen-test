@@ -1,0 +1,15 @@
+.weatherItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.iconWeather {
+    height: 100px;
+}
+
+.hide {
+    display: none;
+}

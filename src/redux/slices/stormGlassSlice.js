@@ -1,22 +1,19 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { generateStormObject } from "../../config";
 
 const initialState = {
     data: []
 };
 
 export const fetchWeatherStorm = createAsyncThunk(
-    'weather/fetchByLanLon',
-    async (lan, lon) => {
-        const { link, headers } = generateStormObject(lan, lon);
+    'stormWeather/fetchByLanLon',
+    async (obj) => {
+        const { link, headers } = obj;
         const response = await axios.get(link, {
             headers
         });
         
         localStorage.setItem('storm', JSON.stringify(response.data));
-        console.log(response.data);
-
         return response.data;
     }
 );
@@ -32,4 +29,4 @@ const stormGlassSlice = createSlice({
     }
 })
 
-export default stormGlassSlice;
+export default stormGlassSlice.reducer;

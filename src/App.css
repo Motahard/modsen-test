@@ -1,0 +1,68 @@
+.App {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+    height: 100vh;
+}
+
+.App > div{
+    position: relative;
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.container > div{
+    position: relative;
+}
+
+.spanBordered {
+    background: #1f2738;
+    padding: 0.5rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+.app-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.container-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+    max-width: 100%;
+}
+
+@media (max-width: 860px) {
+   .App {
+    overflow: auto;
+    background-color: rgb(33, 32, 32);
+   }
+   .app-background {
+    display: none;
+}
+}
+
+
+@media (max-width: 640px) {
+    .App {
+        background-color: rgb(33, 32, 32);
+    }
+    .app-background {
+        display: none;
+    }
+}

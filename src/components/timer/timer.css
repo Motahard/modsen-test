@@ -1,0 +1,23 @@
+.timer-tasks {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    color: #fff;
+}
+
+.hours {
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+}
+
+.hours > span {
+    font-size: 1.5rem;
+}
+
+.date {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
