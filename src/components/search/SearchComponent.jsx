@@ -51,7 +51,7 @@ export const SearchComponent = () => {
                   setSearch('');
                   setInvalidName(false);
                 }, 1500);
-                console.log('error in getting lan lon of city');
+                console.log('error in getting lan lon of city', err);
               });
           }
         }

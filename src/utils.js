@@ -1,7 +1,5 @@
 import { stormGlassKey, openWeatherKey } from "./config";
 
-// const sourceStorm = 'sg';
-
 export const getLatLon = (cityName) => `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${openWeatherKey}`
 export const getOpenIconURL = (name) =>  `https://openweathermap.org/img/wn/${name}@2x.png`
 

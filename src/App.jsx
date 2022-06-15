@@ -6,7 +6,7 @@ import { ContainerComponent } from './components/container/ContainerComponent';
 import { SearchComponent } from './components/search/SearchComponent';
 import { fetchOpenWeather, getOpenCachedData } from './redux/slices/openWeatherSlice';
 import { setToShowData } from './redux/slices/weatherToShow';
-import { generateOpenWeatherLink, generateStormObject } from './utils';
+import { generateOpenWeatherLink } from './utils';
 
 import sunFon from './assets/sun-fon.jpg'
 import sunMain from './assets/sun-main.jpg'
@@ -14,7 +14,6 @@ import cloudyFon from './assets/cloudy-fon.jpg'
 import cloudyMain from './assets/cloudy-main.jpg'
 import hcloudyFon from './assets/hard-cloudy-fon.jpg'
 import hcloudyMain from './assets/hard-cloudy-main.jpg'
-// import axios from 'axios';
 
 const App = () => {
   const firstChild = useSelector(state => state.show.dataToShow.clouds);
@@ -27,9 +26,6 @@ const App = () => {
       const { latitude, longitude } = pos.coords;
       
       const openWeatherCache = localStorage.getItem('open');
-
-      // const { linkStorm, headers } = generateStormObject(latitude, longitude);
-      // axios.get(linkStorm, headers).then(res => console.log(res))
 
       if (!openWeatherCache) {
         const linkOpen = generateOpenWeatherLink(latitude, longitude);
